@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio de Times</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sorteio de Times</h1>
+    <textarea id="nomes" rows="10" placeholder="Cole os nomes aqui"></textarea>
+    <button onclick="sortearTimes()">Sortear Times</button>
+    <h2>Time 1:</h2>
+    <ul id="time1"></ul>
+    <h2>Time 2:</h2>
+    <ul id="time2"></ul>
+    <h2>Reservas:</h2>
+    <ul id="reservas"></ul>
+
+    <script>
+        function sortearTimes() {
+            const textarea = document.getElementById('nomes');
+            const nomes = textarea.value.split('\n').map(nome => nome.trim()).filter(nome => nome !== '');
+
+            // Embaralhar os nomes
+            for (let i = nomes.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [nomes[i], nomes[j]] = [nomes[j], nomes[i]];
+            }
+
+            // Dividir em dois times e reservas
+            const time1 = [];
+            const time2 = [];
+            const reservas = [];
+
+            nomes.forEach((nome, index) => {
+                if (index < 5) {
+                    time1.push(nome);
+                } else if (index < 10) {
+                    time2.push(nome);
+                } else {
+                    reservas.push(nome);
+                }
+            });
+
+            // Exibir os times e reservas
+            const time1Element = document.getElementById('time1');
+            const time2Element = document.getElementById('time2');
+            const reservasElement = document.getElementById('reservas');
+
+            time1Element.innerHTML = '';
+            time2Element.innerHTML = '';
+            reservasElement.innerHTML = '';
+
+            time1.forEach(nome => {
+                const li = document.createElement('li');
+                li.textContent = nome;
+                time1Element.appendChild(li);
+            });
+
+                        time2.forEach(nome => {
+                const li = document.createElement('li');
+                li.textContent = nome;
+                time2Element.appendChild(li);
+            });
+
+            reservas.forEach(nome => {
+                const li = document.createElement('li');
+                li.textContent = nome;
+                reservasElement.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>
+

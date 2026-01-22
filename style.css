@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 20px;
+            background-image: url(izuddin-helmi-adnan-K5ChxJaheKI-unsplash.jpg);
+            background-size: cover;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #7bff00;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            text-align: center;
+            color: #7bff00;
+            background-color: #0000005b;
+            text-transform: uppercase;
+        }
+        textarea {
+            width: 100%;
+            max-width: 400px;
+            margin: 10px auto;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #bbb;
+            background-color: #fff;
+        }
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #0288d1;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0277bd;
+        }
+        ul {
+            max-width: 400px;
+            margin: 10px auto;
+            padding: 0;
+            list-style: none;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        ul li {
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+        }
+        ul li::before {
+            content: url('https://img.icons8.com/ios-filled/50/000000/soccer-player-1.png');
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+        }
