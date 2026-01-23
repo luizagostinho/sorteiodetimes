@@ -16,7 +16,8 @@ body {
         h2 {
             text-align: center;
             color: #7bff00;
-            background-color: #0000005b;
+            background-image: linear-gradient(to right, #00000002, #000000bb, #00000002);
+            border-radius: 40px;;
             text-transform: uppercase;
         }
         textarea {
